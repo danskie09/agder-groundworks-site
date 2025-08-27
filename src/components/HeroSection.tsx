@@ -48,7 +48,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="hero" onClick={scrollToContact}>Get a Quote</Button>
-            <Button variant="outline" onClick={scrollToServices} className="backdrop-blur-md border-white/60 text-white hover:text-primary">
+            <Button variant="outline" onClick={scrollToServices} className="backdrop-blur-md border-white/60 text-white hover:bg-accent hover:text-accent-foreground">
               Explore Services
             </Button>
           </div>
