@@ -48,17 +48,15 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-soft' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth bg-white border-b border-border shadow-soft`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <img
               src={skogLogo}
               alt="Skog og Anleggsdrift logo"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
@@ -68,10 +66,10 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-heading font-medium transition-smooth hover:text-primary ${
+                className={`font-heading font-medium px-2 py-1 rounded-md transition-smooth ${
                   activeSection === item.id
-                    ? 'text-primary border-b-2 border-primary'
-                    : 'text-foreground'
+                    ? 'text-primary bg-primary/10'
+                    : 'text-foreground hover:text-primary hover:bg-primary/5'
                 }`}
               >
                 {item.label}
