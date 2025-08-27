@@ -19,7 +19,7 @@ const AboutSection = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Content */}
             <div>
               <div className="prose prose-lg max-w-none">
@@ -37,7 +37,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Stats */}
+            {/* Stats column */}
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
                 <Card key={stat.label} className="text-center p-6 shadow-soft border-0 hover:shadow-accent transition-smooth group">
