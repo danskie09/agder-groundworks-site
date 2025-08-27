@@ -178,7 +178,9 @@ const ContactSection = () => {
               </CardHeader>
               <CardContent>
                 <a 
-                  href="#" 
+                  href="https://www.facebook.com/profile.php?id=100054403634516" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="inline-flex items-center space-x-3 p-3 rounded-lg hover:bg-sand transition-smooth group"
                 >
                   <div className="bg-gradient-accent p-2 rounded-lg shadow-soft group-hover:shadow-accent transition-smooth">

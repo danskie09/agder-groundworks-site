@@ -20,7 +20,9 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/profile.php?id=100054403634516" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="bg-primary-foreground/10 p-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-smooth"
               >
                 <Facebook className="w-5 h-5" />

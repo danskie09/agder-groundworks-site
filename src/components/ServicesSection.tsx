@@ -1,8 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Drill, Shovel, Truck, Mountain } from 'lucide-react';
-import excavationImage from '@/assets/excavation.jpg';
-import tunnelImage from '@/assets/tunnel-blasting.jpg';
-import aerialImage from '@/assets/aerial-quarry.jpg';
+import blastingImage from '@/assets/services/mountain-blasting.webp';
+import excavationImage from '@/assets/services/graving.webp';
+import transportImage from '@/assets/services/mass-transport.webp';
+import quarryImage from '@/assets/services/purchasing.webp';
 
 const ServicesSection = () => {
   const services = [
@@ -10,7 +11,7 @@ const ServicesSection = () => {
       title: 'Rock Blasting',
       description: 'From drilling to large-scale production jobs.',
       icon: Drill,
-      image: tunnelImage,
+      image: blastingImage,
       details: 'Professional controlled blasting operations for construction and quarry projects.'
     },
     {
@@ -24,14 +25,14 @@ const ServicesSection = () => {
       title: 'Mass Transport',
       description: 'Fast delivery of gravel, bark, stone, and other fill materials.',
       icon: Truck,
-      image: aerialImage,
+      image: transportImage,
       details: 'Reliable transportation of construction materials with our modern fleet.'
     },
     {
       title: 'Quarry',
       description: 'Gravel and crushed stone production, including custom crushing.',
       icon: Mountain,
-      image: aerialImage,
+      image: quarryImage,
       details: 'High-quality aggregates and stone products for construction projects.'
     },
   ];
