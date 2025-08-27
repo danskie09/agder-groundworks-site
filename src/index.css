@@ -163,6 +163,20 @@ All colors MUST be HSL.
     transition: var(--transition-smooth);
   }
   
+  /* Lightweight reveal-on-scroll animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 600ms ease, transform 600ms ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-delay-100 { transition-delay: 100ms; }
+  .reveal-delay-200 { transition-delay: 200ms; }
+  .reveal-delay-300 { transition-delay: 300ms; }
+  
   /* Section spacing */
   .section-padding {
     @apply py-16 md:py-24;

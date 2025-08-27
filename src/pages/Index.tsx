@@ -14,14 +14,30 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <main>
-        <HeroSection />
-        <ServicesSection />
-        <WhyUsSection />
-        <GallerySection />
-        <PricingSection />
-        <AboutSection />
-        <MapSection />
-        <ContactSection />
+        <div className="reveal">
+          <HeroSection />
+        </div>
+        <div className="reveal reveal-delay-100">
+          <ServicesSection />
+        </div>
+        <div className="reveal reveal-delay-200">
+          <WhyUsSection />
+        </div>
+        <div className="reveal reveal-delay-300">
+          <GallerySection />
+        </div>
+        <div className="reveal">
+          <PricingSection />
+        </div>
+        <div className="reveal">
+          <AboutSection />
+        </div>
+        <div className="reveal">
+          <MapSection />
+        </div>
+        <div className="reveal">
+          <ContactSection />
+        </div>
         
       </main>
       <Footer />
