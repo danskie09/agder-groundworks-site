@@ -52,12 +52,15 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
             <img
               src={skogLogo}
               alt="Skog og Anleggsdrift logo"
               className="h-12 w-auto"
             />
+            <span className="font-heading font-bold text-xl text-foreground">
+              Skog og Anleggsdrift AS
+            </span>
           </div>
 
           {/* Desktop Navigation */}
