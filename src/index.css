@@ -2,41 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Machinery Contractor Design System - Professional & Modern 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Brand Colors */
+    --primary: 148 25% 24%;        /* Deep forest green #2e4d34 */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 148 30% 35%;   /* Lighter forest green */
+    
+    --secondary: 0 0% 27%;         /* Slate gray #444444 */
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 22 100% 53%;         /* Bright orange #ff7f11 */
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 22 100% 48%;   /* Darker orange on hover */
+    
+    /* Neutral Colors */
+    --background: 0 0% 100%;       /* White */
+    --foreground: 0 0% 13%;        /* Dark text */
+    --sand: 40 25% 96%;            /* Soft sand #f5f3f0 */
+    --sand-foreground: 0 0% 13%;
+    
+    /* UI Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 13%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 13%;
+    
+    --muted: 40 25% 96%;           /* Soft sand */
+    --muted-foreground: 0 0% 40%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 148 25% 24%;           /* Primary for focus rings */
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+    
+    /* Design System Enhancements */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-hover)) 100%);
+    --shadow-soft: 0 4px 20px hsla(var(--primary), 0.1);
+    --shadow-accent: 0 8px 30px hsla(var(--accent), 0.2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +114,61 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Typography Classes */
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Custom Utility Classes */
+  .bg-sand {
+    background-color: hsl(var(--sand));
+    color: hsl(var(--sand-foreground));
+  }
+  
+  .text-sand-foreground {
+    color: hsl(var(--sand-foreground));
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  /* Section spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
