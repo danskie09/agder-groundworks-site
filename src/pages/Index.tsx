@@ -14,28 +14,28 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <main>
-        <div className="reveal">
+        <div data-aos="fade-up">
           <HeroSection />
         </div>
-        <div className="reveal reveal-delay-100">
+        <div data-aos="fade-up" data-aos-delay="100">
           <ServicesSection />
         </div>
-        <div className="reveal reveal-delay-200">
+        <div data-aos="fade-up" data-aos-delay="150">
           <WhyUsSection />
         </div>
-        <div className="reveal reveal-delay-300">
+        <div data-aos="fade-up" data-aos-delay="200">
           <GallerySection />
         </div>
-        <div className="reveal">
+        <div data-aos="fade-up" data-aos-delay="150">
           <PricingSection />
         </div>
-        <div className="reveal">
+        <div data-aos="fade-up" data-aos-delay="150">
           <AboutSection />
         </div>
-        <div className="reveal">
+        <div data-aos="fade-up" data-aos-delay="150">
           <MapSection />
         </div>
-        <div className="reveal">
+        <div data-aos="fade-up" data-aos-delay="150">
           <ContactSection />
         </div>
         

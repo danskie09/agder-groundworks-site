@@ -35,7 +35,7 @@ const HeroSection = () => {
           </div>
 
           <h1 className="font-heading font-bold leading-tight text-4xl md:text-6xl mb-4">
-            Welcome to Skog and Plantsdrift AS
+            Welcome to Skog og Anleggsdrift AS
           </h1>
 
           <p className="font-heading text-2xl md:text-3xl font-semibold tracking-wide text-accent mb-6 drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
