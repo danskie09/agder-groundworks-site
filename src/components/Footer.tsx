@@ -1,4 +1,5 @@
 import { Facebook, Mail, Phone, MapPin } from 'lucide-react';
+import skogLogo from '@/assets/skog-logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="bg-accent text-accent-foreground px-4 py-2 rounded-lg font-heading font-bold text-lg inline-block mb-4">
-              LOGO
-            </div>
+            <img
+              src={skogLogo}
+              alt="Skog og Anleggsdrift logo"
+              className="h-10 w-auto mb-4"
+            />
             <p className="text-primary-foreground/80 leading-relaxed mb-4">
               Professional machinery contractor serving Agder since 2013. Specializing in excavation, blasting, transport, and quarry operations.
             </p>
