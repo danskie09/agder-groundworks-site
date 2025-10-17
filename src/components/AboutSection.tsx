@@ -24,11 +24,11 @@ const AboutSection = () => {
             <div>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg leading-relaxed text-foreground mb-6">
-                  Founded in 2013, we specialize in excavation, blasting, mass transport, and quarry operations across Agder. Our focus is on quality, safety, and building strong customer relationships.
+                  Founded, we specialize in excavation, blasting, mass transport, and quarry operations across Agder. Our focus is on quality, safety, and building strong customer relationships.
                 </p>
                 
                 <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                  With over a decade of experience in the construction and quarry industry, we have built a reputation for reliability, professionalism, and exceptional service quality. Our modern equipment fleet and skilled operators ensure every project is completed to the highest standards.
+                 decade of experience in the construction and quarry industry, we have built a reputation for reliability, professionalism, and exceptional service quality. Our modern equipment fleet and skilled operators ensure every project is completed to the highest standards.
                 </p>
                 
                 <p className="text-lg leading-relaxed text-muted-foreground">
