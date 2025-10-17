@@ -27,7 +27,7 @@ const GallerySection = () => {
             Gallery
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A glimpse of our recent earthworks, blasting, transport and quarry operations across Agder.
+            recent earthworks, blasting, transport and quarry operations across Agder.
           </p>
         </div>
 

@@ -5,7 +5,7 @@ const WhyUsSection = () => {
     {
       icon: Users,
       title: 'Experienced Team',
-      description: 'Skilled operators with years of industry expertise and proven track records.'
+      description: 'operators with years of industry expertise and proven track records.'
     },
     {
       icon: Shield,
