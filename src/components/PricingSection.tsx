@@ -34,7 +34,7 @@ const PricingSection = () => {
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
-            Materials & Pricing
+            Material
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
             High-quality construction materials delivered to your project site. Contact us for current pricing and availability.
