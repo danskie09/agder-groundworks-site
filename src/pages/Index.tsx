@@ -7,6 +7,7 @@ import MapSection from '@/components/MapSection';
 import PricingSection from '@/components/PricingSection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
+import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -38,7 +39,10 @@ const Index = () => {
         <div data-aos="fade-up" data-aos-delay="150">
           <ContactSection />
         </div>
-        
+        <div data-aos="fade-up" data-aos-delay="150">
+          <BlogSection />
+        </div>
+
       </main>
       <Footer />
     </div>

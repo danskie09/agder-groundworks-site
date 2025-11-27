@@ -1,41 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Drill, Shovel, Truck, Mountain } from 'lucide-react';
-import blastingImage from '@/assets/services/mountain-blasting.webp';
-import excavationImage from '@/assets/services/graving.webp';
-import transportImage from '@/assets/services/mass-transport.webp';
-import quarryImage from '@/assets/services/purchasing.webp';
+import { useServices } from '@/hooks/useSanity';
 
 const ServicesSection = () => {
-  const services = [
-    {
-      title: 'Rock Blasting',
-      description: 'From drilling to large-scale production jobs.',
-      icon: Drill,
-      image: blastingImage,
-      details: 'Professional controlled blasting operations for construction and quarry projects.'
-    },
-    {
-      title: 'Excavation',
-      description: 'Groundwork, leveling, drainage, and trenching.',
-      icon: Shovel,
-      image: excavationImage,
-      details: 'Complete earthmoving services for residential, commercial, and industrial projects.'
-    },
-    {
-      title: 'Mass Transport',
-      description: 'Fast delivery of gravel, bark, stone, and other fill materials.',
-      icon: Truck,
-      image: transportImage,
-      details: 'Reliable transportation of construction materials with our modern fleet.'
-    },
-    {
-      title: 'Quarry',
-      description: 'Gravel and crushed stone production, including custom crushing.',
-      icon: Mountain,
-      image: quarryImage,
-      details: 'High-quality aggregates and stone products for construction projects.'
-    },
-  ];
+  const { data: services } = useServices();
 
   return (
     <section id="services" className="section-padding bg-sand">
@@ -51,8 +18,8 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card 
-              key={service.title} 
+            <Card
+              key={service.title}
               className="group hover:shadow-accent transition-smooth cursor-pointer overflow-hidden border-0 shadow-soft"
             >
               <div className="relative h-48 overflow-hidden">
@@ -66,7 +33,7 @@ const ServicesSection = () => {
                   <service.icon className="w-6 h-6" />
                 </div>
               </div>
-              
+
               <CardHeader>
                 <CardTitle className="font-heading text-xl text-primary group-hover:text-accent transition-smooth">
                   {service.title}
@@ -75,7 +42,7 @@ const ServicesSection = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent>
                 <p className="text-muted-foreground">
                   {service.details}

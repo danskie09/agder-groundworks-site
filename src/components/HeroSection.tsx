@@ -1,26 +1,22 @@
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero.jpg';
+import { useHero } from '@/hooks/useSanity';
 
 const HeroSection = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const scrollToServices = () => {
-    const element = document.getElementById('services');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const { data: heroData } = useHero();
+  const handleScroll = (link: string) => {
+    if (link.startsWith('#')) {
+      const element = document.getElementById(link.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroImage})` }}
+      style={{ backgroundImage: `url(${heroData.backgroundImage})` }}
     >
       {/* Gradient Overlays for readability */}
       <div className="absolute inset-0 bg-black/40"></div>
@@ -31,25 +27,25 @@ const HeroSection = () => {
         <div className="max-w-3xl py-24 md:py-28">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-sm backdrop-blur-md mb-5">
             <span className="h-2 w-2 rounded-full bg-accent" />
-            <span className="tracking-wide">Since 2013 • Agder, Norway</span>
+            <span className="tracking-wide">{heroData.tagline}</span>
           </div>
 
           <h1 className="font-heading font-bold leading-tight text-4xl md:text-6xl mb-4">
-            Skog og Anleggsdrift AS
+            {heroData.title}
           </h1>
 
           <p className="font-heading text-2xl md:text-3xl font-semibold tracking-wide text-accent mb-6 drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
-            MACHINE TREATER THAT OUTSIDE BOTH SMALL AND GREAT DISCOVER IN AGDER
+            {heroData.subtitle}
           </p>
 
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl">
-            Friendly experts in excavation, blasting, transport, and quarry work. Tell us about your project and we’ll help you get started.
+            {heroData.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="hero" onClick={scrollToContact}>Get a Quote</Button>
-            <Button variant="outline" onClick={scrollToServices} className="backdrop-blur-md border-white/60 text-white hover:bg-accent hover:text-accent-foreground">
-              Explore Services
+            <Button variant="hero" onClick={() => handleScroll(heroData.ctaLink)}>{heroData.ctaText}</Button>
+            <Button variant="outline" onClick={() => handleScroll(heroData.secondaryCtaLink)} className="backdrop-blur-md border-white/60 text-white hover:bg-accent hover:text-accent-foreground">
+              {heroData.secondaryCtaText}
             </Button>
           </div>
         </div>
